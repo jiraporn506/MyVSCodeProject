@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก - โปรแกรมช่วยเด็กนักเรียน</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #bbdefb); /* Light blue to lighter blue gradient */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #2196F3; /* Blue header */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .container {
+            flex-grow: 1; /* Allows container to take up available space */
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            gap: 20px; /* Space between sections */
+            justify-content: center; /* Center items horizontally */
+        }
+        .section-card {
+            background-color: #f0f8ff; /* Very light blue for cards */
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            flex: 1; /* Allow cards to grow and shrink */
+            min-width: 280px; /* Minimum width for cards before wrapping */
+            max-width: 32%; /* Max width for 3 cards per row */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .section-card h2 {
+            color: #3f51b5; /* Deeper blue for section titles */
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .section-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+            color: #555;
+            flex-grow: 1; /* Allow paragraph to take space */
+        }
+        .section-card a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+        .section-card a:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack cards vertically on smaller screens */
+                padding: 15px;
+                margin: 20px auto;
+            }
+            .section-card {
+                max-width: 100%; /* Full width for cards */
+                margin-bottom: 15px; /* Add space between stacked cards */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ยินดีต้อนรับสู่โปรแกรมช่วยเด็กนักเรียน! 🎉</h1>
+    </header>
+
+    <div class="container">
+        <div class="section-card">
+            <h2>ตารางเรียน 📚</h2>
+            <p>ดูตารางเรียนประจำวันและประจำสัปดาห์ของคุณ ไม่พลาดทุกวิชาสำคัญ!</p>
+            <a href="study_schedule.html">ดูตารางเรียน</a>
+        </div>
+
+        <div class="section-card">
+            <h2>ตารางอ่านหนังสือ 📖</h2>
+            <p>วางแผนการอ่านหนังสือ ติดตามความคืบหน้า และบรรลุเป้าหมายการเรียนรู้.</p>
+            <a href="reading_plan.html">ดูตารางอ่านหนังสือ</a>
+        </div>
+
+        <div class="section-card">
+            <h2>ช่วยเตือนการบ้าน 🔔</h2>
+            <p>จดการบ้าน กำหนดวันส่ง และรับการแจ้งเตือน เพื่อไม่ให้ลืมส่งงาน.</p>
+            <a href="homework_reminder.html">จัดการการบ้าน</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 โปรแกรมช่วยเด็กนักเรียน. สงวนลิขสิทธิ์.</p>
+    </footer>
+</body>
+</html>
